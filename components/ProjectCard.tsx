@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Github } from 'lucide-react';
-import { ImageWithFallback } from './ImageWithFallback';
-import Image from 'next/image'
+// import { ImageWithFallback } from './ImageWithFallback';
+// import {Image} from 'next/image'
 
 interface ProjectCardProps {
   title: string;
@@ -11,7 +11,7 @@ interface ProjectCardProps {
   github: string;
   demo: string;
   featured: boolean;
-  gradient: string;
+  // gradient: string;
   index: number;
   isInView: boolean;
 }
@@ -23,8 +23,8 @@ export function ProjectCard({
   tags,
   github,
   demo,
-  featured,
-  gradient,
+  // featured,
+  // gradient,
   index,
   isInView,
 }: ProjectCardProps) {
@@ -39,10 +39,10 @@ export function ProjectCard({
       {/* Image Container */}
       <div className="relative h-64 overflow-hidden bg-gradient-to-br ${gradient}"
       >
-        <Image
+        <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover mix-blend-overlay opacity-80 group-hover:scale-110 transition-transform duration-700"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60" />
 
@@ -77,9 +77,9 @@ export function ProjectCard({
         </motion.div>
 
         {/* Gradient accent on top corner */}
-        <div
+        {/* <div
           className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${gradient} opacity-40 blur-2xl`}
-        />
+        /> */}
       </div>
 
       {/* Content */}

@@ -9,48 +9,48 @@ export function Experience() {
 
   const experiences = [
     {
-      company: 'Technical Educator (Volunteer)',
-      role: 'Teaching Assistant & Mentor',
-      period: '2023 - Present',
-      location: 'Remote',
-      description: 'Volunteer as a technical educator, helping aspiring developers learn programming fundamentals and modern web development.',
-      highlights: [
-        'Mentored 20+ students in JavaScript and React fundamentals',
-        'Created learning materials and code examples for beginners',
-        'Conducted code reviews and provided constructive feedback',
-      ],
-      gradient: 'from-blue-500 to-cyan-500',
-    },
-    {
       company: 'Personal Development',
       role: 'Full-Stack Developer',
-      period: '2022 - Present',
+      period: '2024 - Present',
       location: 'Self-Directed',
-      description: 'Built multiple full-stack applications to strengthen development skills and explore modern technologies.',
+      description: 'Building full-stack applications to leverage my proficiency in modern web technologies.',
       highlights: [
-        'Developed 10+ personal projects using React, Node.js, and databases',
-        'Implemented responsive designs and optimized performance',
-        'Learned deployment workflows with modern hosting platforms',
+        'Developed several personal projects using React, Node.js, and MySQL',
+        'Implemented responsive design, clean architecture, and reusable components',
+        'Gained hands-on experience with deployment using modern hosting platforms',
       ],
       gradient: 'from-purple-500 to-pink-500',
     },
     {
-      company: 'Open Source & Learning',
-      role: 'Contributing Developer',
-      period: '2022 - Present',
-      location: 'Remote',
-      description: 'Actively learning through online courses, documentation, and contributing to open source projects.',
+    company: 'Academic Projects',
+    role: 'Project Developer',
+    period: '2024 - 2025',
+    location: 'SUTD (Singapore)',
+    description: 'Worked on multiple collaborative software projects during academic coursework, focusing on practical development and team-based problem solving.',
+    highlights: [
+      'Contributed to group projects involving backend APIs, frontend interfaces, and database design',
+      'Improved code structure, debugging skills, and development workflow',
+      'Strengthened understanding of data structures, algorithms, and system design basics',
+    ],
+    gradient: 'from-orange-500 to-red-500',
+    },
+      {
+      company: 'Thate Pan Hub',
+      role: 'Technical Educator',
+      period: '2021 - 2022',
+      location: 'Remote (Yangon)',
+      description: 'Guided youth in developing programming skills while supporting team coordination and contributing to problem-solving initiatives.',
       highlights: [
-        'Completed multiple online courses in web development and CS fundamentals',
-        'Contributed bug fixes and features to open source repositories',
-        'Built strong foundation in data structures and algorithms',
+        'Mentored students in programming fundamentals and digital literacy',
+        'Encouraged effective communication and teamwork within the learning environment',
+        'Contributed problem-solving ideas during the Ideation Challenge 2022',
       ],
-      gradient: 'from-orange-500 to-red-500',
+      gradient: 'from-blue-500 to-cyan-500',
     },
   ];
 
   return (
-    <section ref={ref} className="py-32 bg-white relative overflow-hidden">
+    <section id="experience" ref={ref} className="py-20 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <motion.div
         animate={{
@@ -71,14 +71,14 @@ export function Experience() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-blue-200 rounded-full mb-6 shadow-sm"
           >
             <Briefcase className="text-blue-600" size={16} />
             <span className="text-gray-700">Experience & Learning</span>
-          </motion.div>
+          </motion.div> */}
           
           <h2 className="text-4xl md:text-6xl text-gray-900 mb-6">
             My Development{' '}

@@ -4,8 +4,10 @@ import { About } from "./about/page";
 import { Projects } from "./projects/page";
 import { Experience } from "./experience/page";
 import { Footer } from "./footer/page";
-import {Skills} from "./skills/page";
+// import {Skills} from "./skills/page";
 import { Navigation } from "./navigation/page";
+import { Achievements } from "./achievements/page";
+import {Contact} from "./contact/page";
 
 export default function Home() {
   return (
@@ -15,7 +17,9 @@ export default function Home() {
       <About />
       <Projects />
       <Experience />
-      <Skills />
+      <Achievements />
+      {/* <Skills /> */}
+      <Contact />
       <Footer />
     </div>
   );

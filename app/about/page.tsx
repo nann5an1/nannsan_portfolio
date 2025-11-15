@@ -35,33 +35,53 @@ export function About() {
   const logos = [
     {
         icon: "React",
-        path: "public/react.svg",
+        path: "/react.svg",
+    },
+     {
+        icon: "Next",
+        path: "/next.svg",
     },
     {
         icon: "Node.js",
-        path: "icons/react.svg",
+        path: "/node.svg",
     },
     {
-        icon: "React",
-        path: "icons/react.svg",
+        icon: "MySQL",
+        path: "/mysql.svg",
     },
     {
-        icon: "React",
-        path: "icons/react.svg",
+        icon: "Express",
+        path: "express.svg",
     },
     {
-        icon: "React",
-        path: "icons/react.svg",
+        icon: "HTML",
+        path: "/html.svg",
+    },
+     {
+        icon: "SASS",
+        path: "/sass.svg",
     },
     {
-        icon: "React",
-        path: "icons/react.svg",
+        icon: "Javascript.js",
+        path: "/javascript.svg",
     },
+    {
+        icon: "C Language",
+        path: "/C.svg",
+    },
+    {
+        icon: "C++ Language",
+        path: "/cpp.svg",
+    },
+    {
+      icon: "Tailwind CSS",
+      path: "/tailwind.svg",
+    }
 
   ]
 
   return (
-    <section id="about" ref={ref} className="py-32 bg-white relative overflow-hidden">
+    <section id="about" ref={ref} className="py-20 bg-white relative overflow-hidden">
       {/* Animated background */}
       <motion.div
         animate={{
@@ -107,19 +127,19 @@ export function About() {
               />
               
               <div className="pl-8 space-y-6 col-start-1 col-end-3">
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  I didn't start with a keyboard in hand—I started with curiosity. A broken website, 
-                  a "View Source" click, and suddenly I was hooked. That curiosity turned into late nights, 
-                  countless tutorials, and an obsession with making the web better.
+                <p className="text-gray-700 text-lg leading-relaxed font-serif">
+                  For me, coding didn’t start with a “lightbulb moment.” 
+                  It started with building things — small projects at first, then bigger ones that demanded cleaner logic, 
+                  better structure, and real problem-solving.
                 </p>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  Fast forward to today: I've shipped products used by thousands, solved problems that 
-                  seemed impossible, and learned that the best code is the code that serves people.
+                <p className="text-gray-700 text-lg leading-relaxed font-serif">
+                  Every project I’ve worked on, whether a full-stack web app, a mobile interface, 
+                  or a backend feature under tight constraints, taught me the same lesson: good software is clear, reliable, and built for real people.
                 </p>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  I believe in building things that matter. Whether it's a sleek landing page or a 
-                  complex application, I bring the same energy: attention to detail, a user-first mindset, 
-                  and code that's built to last.
+                <p className="text-gray-700 text-lg leading-relaxed font-serif">
+                  Today, I focus on creating products that feel intuitive and are reliable to build on. 
+                  Clean architecture, maintainable code, and thoughtful design guide every decision — whether I’m refining a flow, optimizing performance, 
+                  or designing a UI that improves someone’s experience.
                 </p>
               </div>
             </div>
@@ -145,8 +165,8 @@ export function About() {
                     transition={{ delay: 0.7 + index * 0.1 }}
                     className="flex justify-between items-center"
                   >
-                    <span className="text-gray-600">{fact.label}</span>
-                    <span className="text-blue-600">{fact.value}</span>
+                    <span className="text-gray-600 font-semibold italic">{fact.label}</span>
+                    <span className="text-indigo-800">{fact.value}</span>
                   </motion.div>
                 ))}
               </div>
@@ -189,21 +209,19 @@ export function About() {
         {/* Tech Stack Marquee */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 2, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className="relative overflow-hidden"
         >
-          <h3 className="text-gray-900 text-2xl text-center mb-8">Tech I Love Working With</h3>
-          <div className="flex gap-8 animate-scroll">
-            {[
-                'React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Node.js', 'Express', 'Git', 'GitHub', 'Vercel',
-                'React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Node.js', 'Express', 'Git', 'GitHub', 'Vercel',
-            ].map((tech, index) => (
+          <h3 className="text-gray-900 text-2xl text-center mb-8 font-semibold">Languages & Frameworks I Build In</h3>
+          <div className="flex gap-4 animate-scroll pt-12">
+            {logos.map((tech, index) => (
               <div
                 key={index}
-                className="px-6 py-3 bg-white border-2 border-gray-200 rounded-full text-gray-700 whitespace-nowrap hover:border-blue-300 hover:shadow-lg transition-all"
+                className="px-12 py-8 w-full h-12 flex justify-center items-center gap-8 bg-white border-2 border-gray-200 rounded-full text-lg font-semibold text-gray-700 whitespace-nowrap hover:border-blue-300 hover:shadow-lg transition-all"
               >
-                {tech}
+                <img src={tech.path}/>
+                {tech.icon}
               </div>
             ))}
           </div>

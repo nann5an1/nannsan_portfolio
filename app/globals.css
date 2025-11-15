@@ -137,3 +137,27 @@
     @apply bg-background text-foreground;
   }
 }
+
+.swiper {
+  width: 31%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* padding: 20px 30px 20px 30px; */
+  border-radius: 3%;
+  /* background-color: wheat; */
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  border-radius: 3%;
+  /* width: 50%; */
+  /* height: 50px; */
+  
+}
+
+.swiper-slide img {
+  display: block;
+  border-radius: 3%;
+  width: 100%;
+}

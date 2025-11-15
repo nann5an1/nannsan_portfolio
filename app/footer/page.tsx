@@ -12,7 +12,7 @@ export function Footer() {
   const quickLinks = [
     { label: 'Projects', href: '#projects' },
     { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Experience', href: '#experience' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -86,7 +86,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-600 text-center md:text-left">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
+            © {new Date().getFullYear()} Nann Su Htet San. All rights reserved.
           </div>
           
           <div className="flex items-center gap-2 text-gray-600">

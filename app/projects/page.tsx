@@ -3,16 +3,75 @@ import { motion, useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { Sparkles, ArrowRight, Github, Filter } from 'lucide-react';
 import { ProjectCard } from '../../components/ProjectCard';
-import { projects, type Project } from '../data/projects';
+// import { projects, type Project } from '../data/projects';
+
+const projects =[
+  {
+      id: '1',
+      title: 'Sports Events Collaborator Platform',
+      description:
+        'A modern platform for sports enthusiasts to connect with like-minded individuals.',
+      image:
+        '/sukhuma.jpeg',
+      tags: ['React', 'Node.js', 'Express', 'MySQL', 'TypeScript', 'Tailwind CSS'],
+      github: 'https://github.com/nann5an1/joiin',
+      demo: 'https://github.com/nann5an1/joiin/',
+      featured: true,
+      // gradient: 'from-blue-500 to-cyan-500',
+      // category: 'web', 'fullstack',
+    },
+    {
+      id: '2',
+      title: 'AI-Based Skincare Generator',
+      description:
+        'Personalized skincare routine generator using cutting-edge AI technology.',
+      image:
+        '/sukhuma.jpeg',
+      tags: ['Next.js', 'ReactNative','Tailwind CSS', 'Express', 'Groq', 'TypeScript', 'Llama 3.3'],
+      github: 'https://github.com/nann5an1/sukhuma',
+      demo: 'https://github.com/nann5an1/sukhuma',
+      featured: true,
+      // gradient: 'from-purple-500 to-pink-500',
+      // category: 'mobile',
+    },
+    {
+      id: '3',
+      title: 'SoLong 2D Game',
+      description:
+        'A dynamic 2D game with character movement and collision detection.',
+      image:
+        '/solong.png',
+      tags: ['C Language', 'minilibx library', 'Makefile', 'Figma'],
+      github: 'https://github.com',
+      demo: 'https://example.com',
+      featured: true,
+      // gradient: 'from-orange-500 to-red-500',
+      // category: 'web',
+    },
+    {
+      id: '4',
+      title: 'minishell',
+      description:
+        'A simple shell mimicking the properties and functionality of the bash shell',
+      image:
+        'https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnZW9tZXRyaWMlMjBwYXR0ZXJuc3xlbnwxfHx8fDE3NjI4NjM1NzF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      tags: ['React', 'Motion', 'Storybook', 'Tailwind'],
+      github: 'https://github.com',
+      demo: 'https://example.com',
+      featured: true,
+      // gradient: 'from-blue-500 to-cyan-500',
+      // category: 'tool',
+    },
+];
 
 export function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
-  const [filter, setFilter] = useState<'all' | Project['category']>('all');
+  // const [filter, setFilter] = useState<'all' | Project['category']>('all');
 
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
+  // const filteredProjects = filter === 'all' 
+  //   ? projects 
+  //   : projects.filter(p => p.category === filter);
 
 //   const categories = [
 //     { value: 'all' as const, label: 'All Projects' },
@@ -79,18 +138,27 @@ export function Projects() {
 
         {/* Projects Grid - Equal Size Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 auto-rows-fr">
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard
-              key={project.id}
-              {...project}
+              key={index}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              tags={project.tags}
+              github={project.github}
+              demo={project.demo}
+              featured={project.featured}
+              // gradient={project.gradient}
               index={index}
               isInView={isInView}
             />
           ))}
+           
+          {/* ))} */}
         </div>
 
         {/* Empty State */}
-        {filteredProjects.length === 0 && (
+        {/* {filteredProjects.length === 0 && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -102,7 +170,7 @@ export function Projects() {
               Try selecting a different category
             </p>
           </motion.div>
-        )}
+        )} */}
 
         {/* View All Button */}
         <motion.div

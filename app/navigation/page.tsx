@@ -33,7 +33,7 @@ export function Navigation() {
     { label: 'Work', id: 'projects' },
     { label: 'Story', id: 'about' },
     { label: 'Achievements', id: 'achievements' },
-    { label: 'Skills', id: 'skills' },
+    { label: 'Experience', id: 'experience' },
     { label: 'Connect', id: 'contact' },
   ];
 

@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail, ArrowRight, Terminal, Sparkles } from 'lucide-react';
 import { TypingAnimation } from '@/components/ui/typing-animation';
+import Spline from '@splinetool/react-spline';
 
 export function Hero() {
   const [typedText, setTypedText] = useState('');
@@ -87,25 +88,32 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
         <div className="text-center mb-12">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="inline-block mb-6"
           >
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl mb-6 text-gray-900"
-          >
-            Hi, I'm{' '}
-            <span className="gradient-text">
-              Nann Su Htet San
-            </span>
-          </motion.h1>
+          </motion.div> */}
+          <div>
+            <div className='w-screen h-40'>
+            <Spline
+              scene="https://prod.spline.design/2SWENWvrng576y5j/scene.splinecode" 
+            />
+            </div>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-4xl md:text-6xl lg:text-7xl mb-6 text-gray-900"
+            >
+              Hi, I'm{' '}
+              <span className="gradient-text">
+                Nann Su Htet San
+              </span>
+            </motion.h1>
+          </div>
+          
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -132,9 +140,20 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-12"
           >
-            I craft digital experiences that merge beautiful design with powerful functionality. 
-            From concept to launch, I turn ambitious ideas into reality.
+            I craft digital experiences where beautiful design meets practical functionality.
+            From concept through launch, I transform ambitious visions into real products.
           </motion.p>
+
+          {/* <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-12"
+            >
+              I craft digital experiences that merge beautiful design with powerful functionality. 
+              From concept to launch, I turn ambitious ideas into reality.
+          </motion.p> */}
+         
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -169,9 +188,9 @@ export function Hero() {
             className="flex items-center justify-center gap-4"
           >
             {[
-              { icon: Github, href: 'https://github.com', color: 'blue' },
-              { icon: Linkedin, href: 'https://linkedin.com', color: 'purple' },
-              { icon: Mail, href: 'mailto:your.email@example.com', color: 'pink' },
+              { icon: Github, href: 'https://github.com/nann5an1', color: 'blue' },
+              { icon: Linkedin, href: 'https://linkedin.com/in/nannsan-laura/', color: 'purple' },
+              { icon: Mail, href: 'mailto:nannsuhtetsan@gmail.com', color: 'pink' },
             ].map((social, index) => (
               <motion.a
                 key={index}
