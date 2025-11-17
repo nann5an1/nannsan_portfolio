@@ -64,7 +64,7 @@ const projects =[
     },
 ];
 
-export function Projects() {
+export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 

@@ -1,15 +1,14 @@
 import Image from "next/image";
-import {Hero} from "./hero/page"
-import { About } from "./about/page";
-import { Projects } from "./projects/page";
-import { Experience } from "./experience/page";
-import { Footer } from "./footer/page";
-// import {Skills} from "./skills/page";
-import { Navigation } from "./navigation/page";
-import { Achievements } from "./achievements/page";
-import {Contact} from "./contact/page";
+import Hero from "./hero/page"
+import About from "./about/page";
+import Projects from "./projects/page";
+import Experience from "./experience/page";
+import Footer from "./footer/page";
+import Navigation from "./navigation/page";
+import Achievements from "./achievements/page";
+import Contact from "./contact/page";
 
-export default function Home() {
+export function Home() {
   return (
     <div className="min-h-screen justify-center align-center">
       <Navigation />
@@ -18,9 +17,10 @@ export default function Home() {
       <Projects />
       <Experience />
       <Achievements />
-      {/* <Skills /> */}
       <Contact />
       <Footer />
     </div>
   );
 }
+
+export default Home;

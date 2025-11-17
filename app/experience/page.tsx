@@ -3,7 +3,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
-export function Experience() {
+export default function Experience() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 

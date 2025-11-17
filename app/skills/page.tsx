@@ -4,7 +4,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { Terminal, Sparkles } from 'lucide-react';
 
-export function Skills() {
+export default function Skills() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
@@ -124,8 +124,6 @@ export function Skills() {
             </motion.div>
           ))}
         </div>
-
-       
       </div>
     </section>
   );

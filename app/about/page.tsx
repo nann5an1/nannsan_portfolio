@@ -3,11 +3,9 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Code2, Palette, Zap, Users2, Rocket, Heart } from 'lucide-react';
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaReact } from "react-icons/fa";
-// import {Image} from 'next/image'
 
-export function About() {
+
+export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 

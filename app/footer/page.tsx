@@ -2,7 +2,7 @@
 import { Github, Linkedin, Mail, Heart, Code2, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 
-export function Footer() {
+export default function Footer() {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/nann5an1', gradient: 'from-blue-500 to-cyan-500', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com/in/nannsan-laura/', gradient: 'from-purple-500 to-pink-500', label: 'LinkedIn' },

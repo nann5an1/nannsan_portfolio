@@ -6,7 +6,7 @@ import { Github, Linkedin, Mail, ArrowRight, Terminal, Sparkles } from 'lucide-r
 import { TypingAnimation } from '@/components/ui/typing-animation';
 import Spline from '@splinetool/react-spline';
 
-export function Hero() {
+export default function Hero() {
   const [typedText, setTypedText] = useState('');
   const roles = ['Developer', 'Designer', 'Creator', 'Problem Solver'];
   const [roleIndex, setRoleIndex] = useState(0);
@@ -88,13 +88,6 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
         <div className="text-center mb-12">
-          {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-block mb-6"
-          >
-          </motion.div> */}
           <div>
             <div className='w-screen h-40'>
             <Spline
@@ -143,17 +136,6 @@ export function Hero() {
             I craft digital experiences where beautiful design meets practical functionality.
             From concept through launch, I transform ambitious visions into real products.
           </motion.p>
-
-          {/* <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-12"
-            >
-              I craft digital experiences that merge beautiful design with powerful functionality. 
-              From concept to launch, I turn ambitious ideas into reality.
-          </motion.p> */}
-         
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -206,8 +188,6 @@ export function Hero() {
             ))}
           </motion.div>
         </div>
-
-    
       </div>
     </section>
   );

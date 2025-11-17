@@ -5,7 +5,7 @@ import {Swiper, SwiperSlide, useSwiper} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-export  function Achievements(){
+export default function Achievements(){
     return (
         <section id="achievements" className="py-20 bg-white relative overflow-hidden flex flex-col justify-center items-center text-center">
             <h2 className="flex justify-center item-center text-4xl md:text-6xl text-gray-900 mb-6">

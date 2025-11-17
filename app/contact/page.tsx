@@ -4,7 +4,7 @@ import { motion, useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { Mail, MapPin, FileText } from 'lucide-react';
 
-export function Contact() {
+export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const [formData, setFormData] = useState({

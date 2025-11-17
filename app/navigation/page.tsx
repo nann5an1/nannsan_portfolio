@@ -3,7 +3,7 @@ import { Menu, X, Code2, Sparkles } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 
-export function Navigation() {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
