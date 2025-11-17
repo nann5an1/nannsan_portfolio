@@ -117,11 +117,6 @@ export default function Hero() {
             <span>I'm a </span>
             <span className="ml-3 text-blue-600 min-w-[300px] text-left">
              
-              {/* <motion.span
-                animate={{ opacity: [1, 0, 1] }}
-                transition={{ duration: 0.8, repeat: Infinity }}
-                className="inline-block w-1 h-12 bg-blue-600 ml-1"
-              /> */}
               <TypingAnimation> Software Developer</TypingAnimation>
             </span>
             
@@ -154,7 +149,7 @@ export default function Hero() {
             </motion.button>
 
             <motion.a
-              href="mailto:your.email@example.com"
+              href="mailto:nannsuhtetsan@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-white text-gray-900 rounded-full border-2 border-gray-200 hover:border-blue-600 hover:text-blue-600 transition-colors shadow-sm"
