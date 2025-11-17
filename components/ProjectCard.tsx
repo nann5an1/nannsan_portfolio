@@ -23,8 +23,7 @@ export function ProjectCard({
   tags,
   github,
   demo,
-  // featured,
-  // gradient,
+
   index,
   isInView,
 }: ProjectCardProps) {
